@@ -1,0 +1,25 @@
+/* 3. Set base font and a pleasant transition */
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Custom cursor style for the current character */
+.cursor {
+    background-color: #3b82f6; /* bg-blue-600 */
+    border-radius: 2px;
+    animation: blink 1s infinite;
+}
+.cursor.blink-pause {
+    animation: none;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+/* Hide the actual input element */
+#text-input {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
